@@ -1,7 +1,8 @@
 const body = document.body;
 
-const fs = require('fs');
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { lstatSync, symlinkSync } from 'fs';
+import { join } from 'path';
 import { render } from 'react-dom';
 import { fromEvent } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -12,7 +13,7 @@ import { $ } from './fun';
 const AppRoot = $('#root');
 
 export const createSymLink = ([target, link]) =>
-	fs.symlinkSync(target, hostFolder + '/' + link, 'junction');
+	symlinkSync(target, join(hostFolder, link), 'junction');
 
 body.ondragover = () => false;
 
@@ -34,7 +35,7 @@ onFilesDrop$.subscribe(files => {
 	render(
 		App(
 			files
-				.filter(file => fs.lstatSync(file.path).isDirectory())
+				.filter(file => lstatSync(file.path).isDirectory())
 				.map(file => file.path)
 		),
 		AppRoot

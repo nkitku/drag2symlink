@@ -16,7 +16,7 @@ export class HostFolder extends React.Component {
 	render() {
 		return (
 			<Row>
-				<Col lg={4} md={6} xs={12}>
+				<Col lg={12} md={12} xs={12}>
 					<InputGroup>
 						<InputGroup.Prepend>
 							<InputGroup.Text className="bg-dark text-white">
