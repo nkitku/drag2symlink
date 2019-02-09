@@ -5,7 +5,7 @@ import { createSymLink } from '../main';
 export class SymLink extends Component {
 	state = { val: '' };
 	props: any;
-	// state = { val: null };
+
 	render() {
 		return (
 			<Row>
@@ -15,7 +15,9 @@ export class SymLink extends Component {
 				<Col lg={4} md={6} xs={12}>
 					<InputGroup>
 						<InputGroup.Prepend>
-							<InputGroup.Text className="bg-dark text-white">/</InputGroup.Text>
+							<InputGroup.Text className="bg-dark text-white">
+								/
+							</InputGroup.Text>
 						</InputGroup.Prepend>
 						<FormControl
 							className="bg-dark text-white"

@@ -1,25 +1,27 @@
 const body = document.body;
 
 const fs = require('fs');
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { render } from 'react-dom';
 import { fromEvent } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { App } from './components/App';
+import { hostFolder } from './components/SymLinks';
 import { $ } from './fun';
 
 const AppRoot = $('#root');
 
 export const createSymLink = ([target, link]) =>
-	fs.symlinkSync(target, 'C:/Users/ankit/Desktop/' + link, 'junction');
+	fs.symlinkSync(target, hostFolder + '/' + link, 'junction');
 
 body.ondragover = () => false;
 
 body.ondragenter = () => {
-	//   holder.classList.add("holder_state_hover");
+	// $('.holder').classList.add('holder_state_hover');
 	return false;
 };
 
-const onFilesDrop$ = fromEvent(body, 'ondrop').pipe(
+const onFilesDrop$ = fromEvent(body, 'drop').pipe(
 	map((e: any) => {
 		const files = [...e.dataTransfer.files];
 		e.preventDefault();

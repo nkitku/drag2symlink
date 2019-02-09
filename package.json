@@ -1,41 +1,42 @@
 {
-  "name": "link",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.html",
-  "scripts": {
-    "wp": "npx webpack --config webpack.config.js"
-  },
-  "dependencies": {
-    "bootstrap": "^4.2.1",
-    "css-loader": "^2.1.0",
-    "react": "^16.7.0",
-    "react-bootstrap": "^1.0.0-beta.5",
-    "react-dom": "^16.7.0",
-    "rxjs": "^6.4.0",
-    "style-loader": "^0.23.1"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "ts-loader": "^5.3.3",
-    "typescript": "^3.3.1",
-    "webpack": "^4.29.1",
-    "webpack-cli": "^3.2.3",
-    "@types/node": "^10.12.21",
-    "@types/react": "^16.8.1",
-    "@types/react-bootstrap": "^0.32.16",
-    "@types/react-dom": "^16.0.11",
-    "uglifyjs-webpack-plugin": "^1.3.0",
-    "tslib": "^1.9.3"
-  },
-  "window": {
-    "toolbar": false,
-    "resizable": true,
-    "fullscreen": false,
-    "width": 800,
-    "min_width": 800,
-    "height": 600,
-    "min_height": 600
-  }
+	"name": "drag2symlink",
+	"version": "1.0.0",
+	"description": "Drag To Symlink",
+	"main": "index.html",
+	"scripts": {
+		"wp": "npx webpack --config webpack.config.js",
+		"wpw": "npx webpack --config webpack.config.js --watch"
+	},
+	"dependencies": {
+		"bootstrap": "^4.2.1",
+		"react": "^16.7.0",
+		"react-bootstrap": "^1.0.0-beta.5",
+		"react-dom": "^16.7.0",
+		"rxjs": "^6.4.0"
+	},
+	"author": "nkitku",
+	"license": "MIT",
+	"devDependencies": {
+		"css-loader": "^2.1.0",
+		"webpack": "^4.29.1",
+		"@types/node": "^10.12.21",
+		"@types/react-bootstrap": "^0.32.16",
+		"@types/react-dom": "^16.0.11",
+		"@types/react": "^16.8.1",
+		"style-loader": "^0.23.1",
+		"ts-loader": "^5.3.3",
+		"tslib": "^1.9.3",
+		"typescript": "^3.3.1",
+		"uglifyjs-webpack-plugin": "^1.3.0",
+		"webpack-cli": "^3.2.3"
+	},
+	"window": {
+		"toolbar": false,
+		"resizable": true,
+		"fullscreen": false,
+		"width": 800,
+		"min_width": 800,
+		"height": 600,
+		"min_height": 600
+	}
 }
